@@ -1,9 +1,16 @@
 const { Webhooks, createNodeMiddleware } = require("@octokit/webhooks");
-const webhooks = new Webhooks({ secret: "3dteamet" });
+const conf = require('./conf.json');
+
+const webhooks = new Webhooks({ secret: conf.secret });
 
 webhooks.onAny(({ id, name, payload }) => {
-
-    console.log(name, "event received");
+    if (name == "push") {
+        conf.endpoints.forEach(endpoint => {
+            if (endpoint.ref == payload.ref && endpoint.repository == payload.repository.full_name) {
+                exec(endpoint.command);
+            }
+        });
+    }
 });
 
-require("http").createServer(createNodeMiddleware(webhooks, { path: "/" })).listen(3000);
+require("http").createServer(createNodeMiddleware(webhooks, { path: conf.path })).listen(conf.port);

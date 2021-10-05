@@ -1,0 +1,12 @@
+{
+    "secret": "",
+    "path": "/",
+    "port": 9000,
+    "endpoints": [
+        {
+            "ref": "refs/heads/master",
+            "repository": "OssianEriksson/node-webhooks",
+            "command": "echo recieved push event >> output.txt"
+        }
+    ]
+}

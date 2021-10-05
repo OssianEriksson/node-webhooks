@@ -1,0 +1,30 @@
+{
+  "name": "node-webhooks",
+  "version": "1.0.0",
+  "description": "Webhook server for node",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OssianEriksson/node-webhooks.git"
+  },
+  "keywords": [
+    "wehhooks",
+    "github"
+  ],
+  "author": "Ossian Eriksson",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/OssianEriksson/node-webhooks/issues"
+  },
+  "homepage": "https://github.com/OssianEriksson/node-webhooks#readme",
+  "dependencies": {
+    "@octokit/webhooks": "^9.15.1"
+  },
+  "devDependencies": {
+    "eventsource": "^1.1.0"
+  }
+}

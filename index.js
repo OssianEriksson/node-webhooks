@@ -1,5 +1,5 @@
 const { Webhooks, createNodeMiddleware } = require("@octokit/webhooks");
-const webhooks = new Webhooks({ secret: "3dteamet", });
+const webhooks = new Webhooks({ secret: "3dteamet" });
 
 webhooks.onAny(({ id, name, payload }) => {
 

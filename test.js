@@ -1,4 +1,6 @@
 const EventSource = require('eventsource');
+const { Webhooks } = require("@octokit/webhooks");
+const webhooks = new Webhooks({ secret: "3dteamet" });
 
 const webhookProxyUrl = "https://smee.io/I3qputDOxnGo5c69"; // replace with your own Webhook Proxy URL
 const source = new EventSource(webhookProxyUrl);

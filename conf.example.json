@@ -1,5 +1,5 @@
 {
-    "secret": "",
+    "secret": "My Github webhook secret",
     "path": "/",
     "port": 9000,
     "endpoints": [
